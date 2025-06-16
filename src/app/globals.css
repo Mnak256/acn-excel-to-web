@@ -34,16 +34,27 @@ main {
   flex-grow: 1;
 }
 
-footer {
+header, footer {
   display: flex;
 }
 
-@media (max-width: 600px) {
-  main {
-    align-items: center;
-  }
+input {
+  padding-inline: 8px;
+  border: 1px solid black;
+}
 
-  footer {
+select {
+  padding-inline: 4px;
+}
+
+select, input {
+  border-radius: 6px;
+  min-height: 32px;
+  padding-block: 10px;
+}
+
+@media (max-width: 600px) {
+  header, footer {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
