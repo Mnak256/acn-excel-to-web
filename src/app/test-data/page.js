@@ -4,6 +4,7 @@ import UserTypeDropdown from "@/components/TestData/UserTypeDropdown";
 import MarketDropdown from "@/components/TestData/MarketDropdown";
 import CustomDatePicker from "@/components/TestData/CustomDatePicker";
 import TransactionTypeDropdown from "@/components/TestData/UserTypeDropdown copy";
+import TestGenerateButton from "../test-generate/page";
 
 export default function InputForm() {
   return (
@@ -239,7 +240,7 @@ export default function InputForm() {
         />
 
         <label className={styles.buttonContainer}>
-          <button>Submit</button>
+          <TestGenerateButton/>
         </label>
       </div>
     </div>
