@@ -13,11 +13,23 @@
 
 .label {
     margin-block-start: 16px;
+    color: #007294;
 }
 
 .buttonContainer {
-  margin-block-start: 16px;
+  margin-block-start: 32px;
   text-align: right;
+}
+
+.input{
+  background-color: #ffffff;
+  color:#000000;
+  border: 1px solid #000000;
+}
+
+.select{
+  background-color: #ffffff;
+  color:#000000;
 }
 
 @media (max-width: 1200px) {

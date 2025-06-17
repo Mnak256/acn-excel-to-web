@@ -6,6 +6,7 @@ import UserTypeDropdown from "@/components/TestData/UserTypeDropdown";
 import MarketDropdown from "@/components/TestData/MarketDropdown";
 import CustomDatePicker from "@/components/TestData/CustomDatePicker";
 import TransactionTypeDropdown from "@/components/TestData/TransactionTypeDropdown";
+import downloadFile from "../test-generate/page";
 
 export default function InputForm() {
   const [formData, setFormData] = useState({});
@@ -19,6 +20,8 @@ export default function InputForm() {
           .map((input) => ({ [`${input.name}`]: input.value }))
           .reduce((acc, input) => ({ ...acc, ...input }), {});
         setFormData(values);
+        console.log("Form Data:", values);
+        downloadFile(values);
         event.preventDefault();
       }}
     >
@@ -27,12 +30,12 @@ export default function InputForm() {
           <label htmlFor="StoryNumber" className={styles.label}>
             Story Number
           </label>
-          <input type="text" id="StoryNumber" name="StoryNumber" />
+          <input type="text" id="StoryNumber" name="StoryNumber" className={styles.input} />
 
           <label htmlFor="LoBus" className={styles.label}>
             Line of Business
           </label>
-          <select id="LoBus" name="LoBus">
+          <select id="LoBus" name="LoBus" className={styles.select}>
             <option value="CMP">CMP</option>
             <option value="Auto">Auto</option>
             <option value="TPP">TPP</option>
@@ -94,7 +97,7 @@ export default function InputForm() {
           <label htmlFor="segmentType" className={styles.label}>
             Business Classification
           </label>
-          <select id="segmentType" name="segmentType">
+          <select id="segmentType" name="segmentType" className={styles.select}>
             <option value="Apartment">Apartment</option>
             <option value="Building">Building</option>
             <option value="Business">Business</option>
@@ -117,7 +120,7 @@ export default function InputForm() {
           <label htmlFor="BillingType1" className={styles.label}>
             BillingType1
           </label>
-          <select id="BillingType1" name="BillingType1">
+          <select id="BillingType1" name="BillingType1" className={styles.select}>
             <option value="Direct Bill">Direct Bill</option>
             <option value="Trav Pay">Trav Pay</option>
             <option value="Agency Bill Yearly">Agency Bill Yearly</option>
@@ -133,7 +136,7 @@ export default function InputForm() {
           <label htmlFor="BillingType2" className={styles.label}>
             BillingType2
           </label>
-          <select id="BillingType1" name="BillingType2">
+          <select id="BillingType1" name="BillingType2" className={styles.select}>
             <option value="Direct Bill">Direct Bill</option>
             <option value="Trav Pay">Trav Pay</option>
             <option value="Agency Bill Yearly">Agency Bill Yearly</option>
@@ -178,12 +181,19 @@ export default function InputForm() {
             name="CoverageLimit"
             value="<covLimit>"
           />
+          <br />
+          <br />
+          <br />
+          <br />
+          <label className={styles.buttonContainer}>
+            <input type="reset" value="Reset" />
+          </label>
         </div>
         <div className={styles.flex}>
           <label htmlFor="VehicleType" className={styles.label}>
             Vehicle Type
           </label>
-          <select id="VehicleType" name="VehicleType">
+          <select id="VehicleType" name="VehicleType" className={styles.select}>
             <option value="PPT">PPT</option>
             <option value="Commercial Trailer">Commercial Trailer</option>
             <option value="HTRK">HTRK</option>
@@ -201,12 +211,12 @@ export default function InputForm() {
           <label htmlFor="ClassCode" className={styles.label}>
             Class Code
           </label>
-          <input type="text" id="ClassCode" name="ClassCode" />
+          <input type="text" id="ClassCode" name="ClassCode" className={styles.input} />
 
           <label htmlFor="VINNum" className={styles.label}>
             VIN
           </label>
-          <input type="text" id="VINNum" name="VINNum" />
+          <input type="text" id="VINNum" name="VINNum" className={styles.input} />
 
           <label htmlFor="stateCov" className={styles.label}>
             State Cov
@@ -216,7 +226,7 @@ export default function InputForm() {
             type="text"
             id="stateCov"
             name="stateCov"
-            value="<covLimit>"
+            value="<stateCov>"
           />
 
           <label htmlFor="PricingScreen" className={styles.label}>
@@ -227,7 +237,7 @@ export default function InputForm() {
             type="text"
             id="PricingScreen"
             name="PricingScreen"
-            value="<covLimit>"
+            value="<PricingScreen>"
           />
 
           <label htmlFor="AfterRateValidation" className={styles.label}>
@@ -238,7 +248,7 @@ export default function InputForm() {
             type="text"
             id="AfterRateValidation"
             name="AfterRateValidation"
-            value="<UserEnteredValidation>"
+            value="<AfterRateValidation>"
           />
 
           <label htmlFor="valRWS" className={styles.label}>
@@ -260,7 +270,7 @@ export default function InputForm() {
             type="text"
             id="FrmNumber"
             name="FrmNumber"
-            value="<FrmNum>"
+            value="<FrmNumber>"
           />
 
           <TransactionTypeDropdown
@@ -277,9 +287,8 @@ export default function InputForm() {
             id="subTransactionType3"
             label="Transaction Type"
           />
-
           <label className={styles.buttonContainer}>
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Generate Test Case" />
           </label>
         </div>
       </div>

@@ -6,7 +6,7 @@ const StatesDropdown = ({ id, label }) => {
       <label htmlFor={id} className={styles.label}>
         {label}
       </label>
-      <select id={id} name={id}>
+      <select id={id} name={id} className={styles.select}>
         <option value="AL">Alabama</option>
         <option value="AK">Alaska</option>
         <option value="AZ">Arizona</option>

@@ -3,7 +3,7 @@ import styles from "./Header.module.css";
 const Header = () => {
   return (
     <header className={styles.header}>
-      <h3>Excel to Webapp</h3>
+      <h3>TestCaseXcel</h3>
     </header>
   );
 };

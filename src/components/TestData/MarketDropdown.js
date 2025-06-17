@@ -6,7 +6,7 @@ const MarketDropdown = ({ id, label }) => {
       <label htmlFor={id} className={styles.label}>
         {label}
       </label>
-      <select id={id} name={id}>
+      <select id={id} name={id} className={styles.select}>
         <option value="NATIONAL PROGRAMS">NATIONAL PROGRAMS</option>
         <option value="NATIONAL ACCOUNTS">NATIONAL ACCOUNTS</option>
         <option value="MIDDLE MARKET_CAG 14">MIDDLE MARKET_CAG 14</option>
