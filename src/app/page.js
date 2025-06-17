@@ -6,7 +6,6 @@ import routes from "@/components/utils/routes";
 export default function Home() {
   return (
     <div className={testDataStyles.field}>
-      <div>Main content</div>
       <Link href={routes.testData}>Input Form</Link>
     </div>
   );

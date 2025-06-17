@@ -42,14 +42,34 @@ input {
   padding-inline: 8px;
 }
 
+input:disabled {
+  cursor: not-allowed;
+}
+
 select {
   padding-inline: 4px;
 }
 
-select, input {
+button {
+  min-width: 200px;
+  background-color: #af1214;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #7a0c0e;
+}
+
+button:active {
+  background-color: #5c1113;
+  color: #d3d3d3;
+}
+
+select, input, button {
   border: 1px solid black;
   border-radius: 6px;
-  min-height: 32px;
+  min-height: 28px;
   padding-block: 10px;
 }
 
