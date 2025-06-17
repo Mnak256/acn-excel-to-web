@@ -5,7 +5,7 @@ import StatesDropdown from "@/components/TestData/StatesDropdown";
 import UserTypeDropdown from "@/components/TestData/UserTypeDropdown";
 import MarketDropdown from "@/components/TestData/MarketDropdown";
 import CustomDatePicker from "@/components/TestData/CustomDatePicker";
-import TransactionTypeDropdown from "@/components/TestData/UserTypeDropdown copy";
+import TransactionTypeDropdown from "@/components/TestData/TransactionTypeDropdown";
 
 export default function InputForm() {
   const [formData, setFormData] = useState({});
