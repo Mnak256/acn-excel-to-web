@@ -34,16 +34,47 @@ main {
   flex-grow: 1;
 }
 
-footer {
+header, footer {
   display: flex;
 }
 
-@media (max-width: 600px) {
-  main {
-    align-items: center;
-  }
+input {
+  padding-inline: 8px;
+}
 
-  footer {
+input:disabled {
+  cursor: not-allowed;
+}
+
+select {
+  padding-inline: 4px;
+}
+
+button {
+  min-width: 200px;
+  background-color: #af1214;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #7a0c0e;
+}
+
+button:active {
+  background-color: #5c1113;
+  color: #d3d3d3;
+}
+
+select, input, button {
+  border: 1px solid black;
+  border-radius: 6px;
+  min-height: 28px;
+  padding-block: 10px;
+}
+
+@media (max-width: 600px) {
+  header, footer {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;

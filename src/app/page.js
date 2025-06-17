@@ -1,12 +1,12 @@
+import Link from "next/link";
 import styles from "./page.module.css";
-import TestGenerate from "./testgenerate";
+import testDataStyles from "@/app/test-data/page.module.css";
+import routes from "@/components/utils/routes";
 
 export default function Home() {
   return (
-    <>
-      <div>Main content</div>
-      <br/>
-      <TestGenerate/>
-    </>
+    <div className={testDataStyles.field}>
+      <Link href={routes.testData}>Input Form</Link>
+    </div>
   );
 }
