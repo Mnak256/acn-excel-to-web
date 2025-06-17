@@ -30,7 +30,7 @@ export default function InputForm() {
           <label htmlFor="StoryNumber" className={styles.label}>
             Story Number
           </label>
-          <input type="text" id="StoryNumber" name="StoryNumber" className={styles.input}/>
+          <input type="text" id="StoryNumber" name="StoryNumber" className={styles.input} />
 
           <label htmlFor="LoBus" className={styles.label}>
             Line of Business
@@ -181,6 +181,13 @@ export default function InputForm() {
             name="CoverageLimit"
             value="<covLimit>"
           />
+          <br />
+          <br />
+          <br />
+          <br />
+          <label className={styles.buttonContainer}>
+            <input type="reset" value="Reset" />
+          </label>
         </div>
         <div className={styles.flex}>
           <label htmlFor="VehicleType" className={styles.label}>
@@ -204,12 +211,12 @@ export default function InputForm() {
           <label htmlFor="ClassCode" className={styles.label}>
             Class Code
           </label>
-          <input type="text" id="ClassCode" name="ClassCode" className={styles.input}/>
+          <input type="text" id="ClassCode" name="ClassCode" className={styles.input} />
 
           <label htmlFor="VINNum" className={styles.label}>
             VIN
           </label>
-          <input type="text" id="VINNum" name="VINNum" className={styles.input}/>
+          <input type="text" id="VINNum" name="VINNum" className={styles.input} />
 
           <label htmlFor="stateCov" className={styles.label}>
             State Cov
@@ -280,10 +287,8 @@ export default function InputForm() {
             id="subTransactionType3"
             label="Transaction Type"
           />
-
           <label className={styles.buttonContainer}>
-            {/* <TestGenerateButton /> */}
-            <input type="submit" value="Generate Test case" />
+            <input type="submit" value="Generate Test Case" />
           </label>
         </div>
       </div>

@@ -51,7 +51,7 @@ select {
   padding-inline: 4px;
 }
 
-button, input[type="submit"] {
+button, input[type="submit"], input[type="reset"] {
   min-width: 200px;
   background-color: #af1214;
   color: white;
