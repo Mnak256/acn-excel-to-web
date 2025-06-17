@@ -50,18 +50,18 @@ select {
   padding-inline: 4px;
 }
 
-button {
+button, input[type="submit"] {
   min-width: 200px;
   background-color: #af1214;
   color: white;
   cursor: pointer;
 }
 
-button:hover {
+button:hover, button, input[type="submit"]:hover {
   background-color: #7a0c0e;
 }
 
-button:active {
+button:active, input[type="submit"]:active {
   background-color: #5c1113;
   color: #d3d3d3;
 }
