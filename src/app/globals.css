@@ -40,7 +40,6 @@ header, footer {
 
 input {
   padding-inline: 8px;
-  border: 1px solid black;
 }
 
 select {
@@ -48,6 +47,7 @@ select {
 }
 
 select, input {
+  border: 1px solid black;
   border-radius: 6px;
   min-height: 32px;
   padding-block: 10px;
