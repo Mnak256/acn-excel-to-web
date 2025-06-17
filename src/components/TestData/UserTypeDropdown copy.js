@@ -6,7 +6,7 @@ const TransactionTypeDropdown = ({ id, label }) => {
       <label htmlFor={id} className={styles.label}>
         {label}
       </label>
-      <select id={id} name={id}>
+      <select id={id} name={id} className={styles.select}>
         <option value="Change">Change</option>
         <option value="Renewal">Renewal</option>
         <option value="Rewrite Same">Rewrite Same</option>
