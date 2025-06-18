@@ -17,6 +17,9 @@
 }
 
 .buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 24px;
   margin-block-start: 32px;
   text-align: right;
 }
