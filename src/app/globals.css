@@ -52,11 +52,34 @@ select {
   padding-inline: 4px;
 }
 
-button, input[type="submit"], input[type="reset"] {
-  min-width: 200px;
+button, input[type="submit"] {
+  padding-inline: 16px;
   background-color: #af1214;
   color: white;
   cursor: pointer;
+}
+
+input[type="reset"] {
+  padding-inline: 16px;
+  cursor: pointer;
+}
+
+.secondaryButton {
+  background-color: #ffffff;
+  color: black;
+  border: 1px solid #af1214;
+}
+
+.secondaryButton:hover {
+  background-color: #dddddd;
+  color: black;
+  border: 1px solid #851113;
+}
+
+.secondaryButton:active {
+  background-color: #757575;
+  color: white;
+  border: 1px solid #4e0c0d;
 }
 
 button:hover, button, input[type="submit"]:hover {
