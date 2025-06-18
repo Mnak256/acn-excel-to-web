@@ -1,12 +1,18 @@
 import styles from "@/app/test-data/page.module.css";
 
-const StatesDropdown = ({ id, label }) => {
+const StatesDropdown = ({ id, label, value, onChange }) => {
   return (
     <>
       <label htmlFor={id} className={styles.label}>
         {label}
       </label>
-      <select id={id} name={id} className={styles.select}>
+      <select
+        id={id}
+        name={id}
+        className={styles.select}
+        value={value}
+        onChange={onChange}
+      >
         <option value="AL">Alabama</option>
         <option value="AK">Alaska</option>
         <option value="AZ">Arizona</option>

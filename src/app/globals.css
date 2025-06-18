@@ -36,7 +36,8 @@ main {
   padding-top: 50px;
 }
 
-header, footer {
+header,
+footer {
   display: flex;
 }
 
@@ -52,7 +53,8 @@ select {
   padding-inline: 4px;
 }
 
-button, input[type="submit"] {
+button,
+input[type="submit"] {
   padding-inline: 16px;
   background-color: #af1214;
   color: white;
@@ -82,16 +84,21 @@ input[type="reset"] {
   border: 1px solid #4e0c0d;
 }
 
-button:hover, button, input[type="submit"]:hover {
+button:hover,
+button,
+input[type="submit"]:hover {
   background-color: #7a0c0e;
 }
 
-button:active, input[type="submit"]:active {
+button:active,
+input[type="submit"]:active {
   background-color: #5c1113;
   color: #d3d3d3;
 }
 
-select, input, button {
+select,
+input,
+button {
   border: 1px solid black;
   border-radius: 6px;
   min-height: 28px;
@@ -99,7 +106,8 @@ select, input, button {
 }
 
 @media (max-width: 600px) {
-  header, footer {
+  header,
+  footer {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
@@ -115,5 +123,30 @@ select, input, button {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+.fade {
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes fadeIn {
+  from {
+    height: 0px;
+    transform: scaleX(0);
+  }
+  to {
+    height: auto;
+    transform: scaleX(1);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
