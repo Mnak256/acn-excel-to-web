@@ -20,7 +20,6 @@ export default function InputForm() {
           .map((input) => ({ [`${input.name}`]: input.value }))
           .reduce((acc, input) => ({ ...acc, ...input }), {});
         setFormData(values);
-        //console.log("Form Data:", values);
         downloadFile(values);
         event.preventDefault();
       }}
@@ -30,7 +29,12 @@ export default function InputForm() {
           <label htmlFor="StoryNumber" className={styles.label}>
             Story Number
           </label>
-          <input type="text" id="StoryNumber" name="StoryNumber" className={styles.input} />
+          <input
+            type="text"
+            id="StoryNumber"
+            name="StoryNumber"
+            className={styles.input}
+          />
 
           <label htmlFor="LoBus" className={styles.label}>
             Line of Business
@@ -120,7 +124,11 @@ export default function InputForm() {
           <label htmlFor="BillingType1" className={styles.label}>
             BillingType1
           </label>
-          <select id="BillingType1" name="BillingType1" className={styles.select}>
+          <select
+            id="BillingType1"
+            name="BillingType1"
+            className={styles.select}
+          >
             <option value="Direct Bill">Direct Bill</option>
             <option value="Trav Pay">Trav Pay</option>
             <option value="Agency Bill Yearly">Agency Bill Yearly</option>
@@ -136,7 +144,11 @@ export default function InputForm() {
           <label htmlFor="BillingType2" className={styles.label}>
             BillingType2
           </label>
-          <select id="BillingType1" name="BillingType2" className={styles.select}>
+          <select
+            id="BillingType1"
+            name="BillingType2"
+            className={styles.select}
+          >
             <option value="Direct Bill">Direct Bill</option>
             <option value="Trav Pay">Trav Pay</option>
             <option value="Agency Bill Yearly">Agency Bill Yearly</option>
@@ -181,13 +193,6 @@ export default function InputForm() {
             name="CoverageLimit"
             value="<covLimit>"
           />
-          <br />
-          <br />
-          <br />
-          <br />
-          <label className={styles.buttonContainer}>
-            <input type="reset" value="Reset" />
-          </label>
         </div>
         <div className={styles.flex}>
           <label htmlFor="VehicleType" className={styles.label}>
@@ -211,12 +216,22 @@ export default function InputForm() {
           <label htmlFor="ClassCode" className={styles.label}>
             Class Code
           </label>
-          <input type="text" id="ClassCode" name="ClassCode" className={styles.input} />
+          <input
+            type="text"
+            id="ClassCode"
+            name="ClassCode"
+            className={styles.input}
+          />
 
           <label htmlFor="VINNum" className={styles.label}>
             VIN
           </label>
-          <input type="text" id="VINNum" name="VINNum" className={styles.input} />
+          <input
+            type="text"
+            id="VINNum"
+            name="VINNum"
+            className={styles.input}
+          />
 
           <label htmlFor="stateCov" className={styles.label}>
             State Cov
@@ -287,9 +302,10 @@ export default function InputForm() {
             id="subTransactionType3"
             label="Transaction Type"
           />
-          <label className={styles.buttonContainer}>
+          <div className={styles.buttonContainer}>
+            <input type="reset" value="Reset" className="secondaryButton" />
             <input type="submit" value="Generate Test Case" />
-          </label>
+          </div>
         </div>
       </div>
     </form>
