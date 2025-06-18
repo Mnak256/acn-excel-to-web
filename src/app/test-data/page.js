@@ -20,7 +20,7 @@ export default function InputForm() {
           .map((input) => ({ [`${input.name}`]: input.value }))
           .reduce((acc, input) => ({ ...acc, ...input }), {});
         setFormData(values);
-        console.log("Form Data:", values);
+        //console.log("Form Data:", values);
         downloadFile(values);
         event.preventDefault();
       }}
