@@ -47,8 +47,8 @@ export default function InputForm() {
             value={formData.LoBus}
             onChange={getOnChangeFunction(formData, setFormData, "LoBus")}
           >
+            <option value="AUTO">AUTO</option>
             <option value="CMP">CMP</option>
-            <option value="Auto">Auto</option>
             <option value="TPP">TPP</option>
             <option value="UMB">UMB</option>
             <option value="UMB_INF">UMB_INF</option>

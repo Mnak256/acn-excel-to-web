@@ -1,6 +1,6 @@
 export const initialFormData = {
-  StoryNumber: "FLOW-7715",
-  LoBus: "CMP",
+  StoryNumber: "AUTO-7715",
+  LoBus: "AUTO",
   Usertype1: "EMPLOYEE",
   Usertype2: "AGENT",
   Usertype3: "MGA",

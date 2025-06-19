@@ -60,61 +60,61 @@ export default function downloadFile(uiFormData) {
         headers: [
           { text: "Test Name", label: "testName", size: 20, style: "headerStyle" },
           { text: "Description", label: "description", size: 50, style: "headerStyle" },
-          { text: "Steps", label: "steps", style: "headerStyle" },
-          { text: "Design Steps", label: "designSteps", size: 100, style: "headerStyle" },
-          { text: "Expected Output", label: "expectedOutput", size: 100, style: "headerStyle" }
+          { text: "Steps", label: "steps", size: 7, style: "headerStyle" },
+          { text: "Design Steps", label: "designSteps", size: 80, style: "headerStyle" },
+          { text: "Expected Output", label: "expectedOutput", size: 80, style: "headerStyle" }
         ],
         data: [
           {
             width: 20,
             height: 100,
             style: "firstRowStyle",
-            "testName": `AUTO-${uiFormData.StoryNumber}_EMPLOYEE_SELECT_NB_RenewalTC01`,
-            "description": `LOB: ${uiFormData.LoBus} \n SELECT Market and EMPLOYEE Login.\n \nNew business:\n PED as 6/1/2025 and RED 6/15/2025\nDescription:\n Validate Before Rating the policy - <valBeforeRate>\n Validate After Rating the policy -\n <User EnterValidation>\n`,
+            "testName": `${uiFormData.StoryNumber}_${uiFormData.LoBus}_${uiFormData.Usertype1}_${uiFormData.Market1}_NB_${uiFormData.subTransactionType1}TC01`,
+            "description": `LOB: ${uiFormData.LoBus} \n ${uiFormData.Market1} Market and ${uiFormData.Usertype1} Login.\n \nNew business:\n PED as ${uiFormData.PolicyEff} and RED ${uiFormData.RateEff}\nDescription:\n Validate Before Rating the policy - ${uiFormData.BeforeRateValidation}\n Validate After Rating the policy -\n ${uiFormData.AfterRateValidation}\n`,
             "steps": 1,
-            "designSteps": `Preconditions:\n Login As: EMPLOYEE\n Market: SELECT\nLOB: Auto\nPolicy type: Auto\nPolicy Effective Date: ${uiFormData.PolicyEff}\nRate Entry Date: ${uiFormData.RateEff}\n Governing state: ${uiFormData.State1}\n Industry Segment: ${uiFormData.segmentType}`,
+            "designSteps": `Preconditions:\n Login As: ${uiFormData.Usertype1}\n Market: ${uiFormData.Market1}\nLOB: ${uiFormData.LoBus}\nPolicy type: ${uiFormData.LoBus}\nPolicy Effective Date: ${uiFormData.PolicyEff}\nRate Entry Date: ${uiFormData.RateEff}\n Governing state: ${uiFormData.State1}\n Industry Segment: ${uiFormData.segmentType}`,
             "expectedOutput": "",
           },
           {
             "testName": "",
             "description": "",
             "steps": 2,
-            "designSteps": "Auto New Business:\nInitiate a Auto Policy with PED as 6/1/2025",
+            "designSteps": `Auto New Business:\nInitiate a ${uiFormData.LoBus} Policy with PED as ${uiFormData.PolicyEff}`,
             "expectedOutput": "Policy should be initiate successfully"
           },
           {
             "testName": "",
             "description": "",
             "steps": 3,
-            "designSteps": "Select Apartment and Direct Bill on policy Info screen",
+            "designSteps": `Select ${uiFormData.segmentType} and ${uiFormData.BillingType1} on policy Info screen`,
             "expectedOutput": "System should perform given action"
           },
           {
             "testName": "",
             "description": "",
             "steps": 4,
-            "designSteps": "Add/Remove Policy Coverage <PolicyCov> and Validate the Coverage\n Limit Co Limit",
+            "designSteps": `Add/Remove Policy Coverage ${uiFormData.CovCd} and Validate the Coverage\n Limit ${uiFormData.CoverageLimit}`,
             "expectedOutput": "Given should be validated"
           },
           {
             "testName": "",
             "description": "",
             "steps": 5,
-            "designSteps": "If Vehicle Type is HTRK, then Enter valid class code 33599 and valid\n VIN 1HTSHPCR8RH537334 on Vechile Information",
+            "designSteps": `If Vehicle Type is  ${uiFormData.VehicleType}, then Enter valid class code  ${uiFormData.ClassCode} and valid\n VIN  ${uiFormData.VINNum} on Vechile Information`,
             "expectedOutput": "Vehicle information should populated"
           },
           {
             "testName": "",
             "description": "",
             "steps": 6,
-            "designSteps": "Add Remove State Coverage <stateCov> and Validate the Coverage \nLimit CovLimit",
+            "designSteps": `Add Remove State Coverage ${uiFormData.CovCd} and Validate the Coverage \n${uiFormData.CoverageLimit}`,
             "expectedOutput": "Given should be validated"
           },
           {
             "testName": "",
             "description": "",
             "steps": 7,
-            "designSteps": "Validate <valBeforeRate> before rating the policy",
+            "designSteps": `Validate ${uiFormData.BeforeRateValidation} before rating the policy`,
             "expectedOutput": "Given should be validated"
           },
           {
@@ -128,28 +128,28 @@ export default function downloadFile(uiFormData) {
             "testName": "",
             "description": "",
             "steps": 9,
-            "designSteps": "Validate this-<UserEnetrvalidation> on Quote Summary screen",
+            "designSteps": `Validate this-${uiFormData.AfterRateValidation} on Quote Summary screen`,
             "expectedOutput": "Given should be validated"
           },
           {
             "testName": "",
             "description": "",
             "steps": 10,
-            "designSteps": "Add/Modify on Pricing screen and Validate- <AddDeleteOnPricing>",
+            "designSteps": `Add/Modify on Pricing screen and Validate- ${uiFormData.PricingScreen}`,
             "expectedOutput": "Given should be validated"
           },
           {
             "testName": "",
             "description": "",
             "steps": 11,
-            "designSteps": "Download the RWS and validate <valRWS>-in rating worksheet",
+            "designSteps": `Download the RWS and validate ${uiFormData.valRWS}-in rating worksheet`,
             "expectedOutput": "Given should be validated"
           },
           {
             "testName": "",
             "description": "",
             "steps": 12,
-            "designSteps": "Validate this form FrmNbr should be present on View Attach Form\n screen",
+            "designSteps": `Validate this form ${uiFormData.FrmNumber} should be present on View Attach Form\n screen`,
             "expectedOutput": "Form should be attached"
           },
           {
@@ -163,14 +163,14 @@ export default function downloadFile(uiFormData) {
             "testName": "",
             "description": "",
             "steps": 14,
-            "designSteps": "Auto Renewal:\nInitiate a Renewal Transaction with PED as 6/1/2025",
-            "expectedOutput": "sub Trasaction Type1 transaction should initiate successfully"
+            "designSteps": `Auto ${uiFormData.subTransactionType1}:\nInitiate a ${uiFormData.subTransactionType1} Transaction with PED as ${uiFormData.PolicyEff}`,
+            "expectedOutput": `${uiFormData.subTransactionType1} transaction should initiate successfully`
           },
           {
             "testName": "",
             "description": "",
             "steps": 15,
-            "designSteps": "Navigate to Policy Coverage screen and Validate this coverage\n <PolicyCov> has added to the policy",
+            "designSteps": `Navigate to Policy Coverage screen and Validate this coverage\n ${uiFormData.CovCd} has added to the policy`,
             "expectedOutput": "Given should be validated"
           },
           {
@@ -191,14 +191,14 @@ export default function downloadFile(uiFormData) {
             "testName": "",
             "description": "",
             "steps": 18,
-            "designSteps": "Download the RWS and validate <valRWS>-in rating worksheet",
+            "designSteps": `Download the RWS and validate ${uiFormData.valRWS}-in rating worksheet`,
             "expectedOutput": "Given should be validated"
           },
           {
             "testName": "",
             "description": "",
             "steps": 19,
-            "designSteps": "Validate this form-FrmNbr should be present on View Attach Form\n screen",
+            "designSteps": `Validate this form-${uiFormData.FrmNumber} should be present on View Attach Form\n screen`,
             "expectedOutput": "Form should be attached"
           },
           {
