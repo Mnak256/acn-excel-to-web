@@ -272,7 +272,7 @@ export default function InputForm() {
               
             </div>
           )} */}
-          <Fade show={formData.LoBus === "Auto"}>
+          <Fade show={formData.LoBus === "AUTO"}>
             <label htmlFor="VehicleType" className={styles.label}>
               Vehicle Type
             </label>
@@ -314,7 +314,7 @@ export default function InputForm() {
             onChange={getOnChangeFunction(formData, setFormData, "ClassCode")}
           />
 
-          <Fade show={formData.LoBus === "Auto"}>
+          <Fade show={formData.LoBus === "AUTO"}>
             <label htmlFor="VINNum" className={styles.label}>
               VIN
             </label>
