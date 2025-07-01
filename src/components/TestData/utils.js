@@ -30,6 +30,12 @@ export const initialFormData = {
   subTransactionType1: "Change",
   subTransactionType2: "Renewal",
   subTransactionType3: "Rewrite New",
+  street1: "arlinton",
+  street2: "wilston",
+  City1: "new york",
+  City2: "texas",
+  Zip1: "50001",
+  Zip2: "50002",
 };
 
 export const getOnChangeFunction = (stateValue, stateSetter, name) => {

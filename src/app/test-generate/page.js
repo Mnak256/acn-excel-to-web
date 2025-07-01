@@ -72,7 +72,7 @@ export default function downloadFile(uiFormData) {
             "testName": `${uiFormData.StoryNumber}_${uiFormData.LoBus}_${uiFormData.Usertype1}_${uiFormData.Market1}_NB_${uiFormData.subTransactionType1}TC01`,
             "description": `LOB: ${uiFormData.LoBus} \n ${uiFormData.Market1} Market and ${uiFormData.Usertype1} Login.\n \nNew business:\n PED as ${uiFormData.PolicyEff} and RED ${uiFormData.RateEff}\nDescription:\n Validate Before Rating the policy - ${uiFormData.BeforeRateValidation}\n Validate After Rating the policy -\n ${uiFormData.AfterRateValidation}\n`,
             "steps": 1,
-            "designSteps": `Preconditions:\n Login As: ${uiFormData.Usertype1}\n Market: ${uiFormData.Market1}\nLOB: ${uiFormData.LoBus}\nPolicy type: ${uiFormData.LoBus}\nPolicy Effective Date: ${uiFormData.PolicyEff}\nRate Entry Date: ${uiFormData.RateEff}\n Governing state: ${uiFormData.State1}\n Industry Segment: ${uiFormData.segmentType}`,
+            "designSteps": `Preconditions:\n Login As: ${uiFormData.Usertype1}\n Market: ${uiFormData.Market1}\nLOB: ${uiFormData.LoBus}\nPolicy type: ${uiFormData.LoBus}\nPolicy Effective Date: ${uiFormData.PolicyEff}\nRate Entry Date: ${uiFormData.RateEff}\n Governing state: ${uiFormData.State1}\n Industry Segment: ${uiFormData.segmentType}\nAddress 1: ${uiFormData.street1}, ${uiFormData.City1}, ${uiFormData.State1}, ${uiFormData.Zip1}\nAddress 2: ${uiFormData.street2}, ${uiFormData.City2}, ${uiFormData.State2}, ${uiFormData.Zip2}`,
             "expectedOutput": "",
           },
           {
@@ -122,7 +122,7 @@ export default function downloadFile(uiFormData) {
             "description": "",
             "steps": 8,
             "designSteps": "Rate the policy",
-            "expectedOutput": "Policy Sshould be rated successfully"
+            "expectedOutput": "Policy should be rated successfully"
           },
           {
             "testName": "",
