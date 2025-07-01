@@ -111,79 +111,81 @@ export default function InputForm() {
             onChange={getOnChangeFunction(formData, setFormData, "Market3")}
           />
         </div>
-         <div className={styles.flex}>
-        <label htmlFor="street1" className={styles.label}>
-          Street 1
-        </label>
-        <input
-          type="text"
-          id="street1"
-          name="street1"
-          className={styles.input}
-          value={formData.street1}
-          onChange={getOnChangeFunction(formData, setFormData, "street1")}
-        />
-
-        <label htmlFor="street2" className={styles.label}>
-          Street 2
-        </label>
-        <input
-          type="text"
-          id="street2"
-          name="street2"
-          className={styles.input}
-          value={formData.street2}
-          onChange={getOnChangeFunction(formData, setFormData, "street2")}
-        />
-
-        <label htmlFor="City1" className={styles.label}>
-          City 1
-        </label>
-        <input
-          type="text"
-          id="City1"
-          name="City1"
-          className={styles.input}
-          value={formData.City1}
-          onChange={getOnChangeFunction(formData, setFormData, "City1")}
-        />
-
-        <label htmlFor="City2" className={styles.label}>
-          City 2
-        </label>
-        <input
-          type="text"
-          id="City2"
-          name="City2"
-          className={styles.input}
-          value={formData.City2}
-          onChange={getOnChangeFunction(formData, setFormData, "City2")}
-        />
-
-        <label htmlFor="Zip1" className={styles.label}>
-          Zip 1
-        </label>
-        <input
-          type="text"
-          id="Zip1"
-          name="Zip1"
-          className={styles.input}
-          value={formData.Zip1}
-          onChange={getOnChangeFunction(formData, setFormData, "Zip1")}
-        />
-
-        <label htmlFor="Zip2" className={styles.label}>
-          Zip 2
-        </label>
-        <input
-          type="text"
-          id="Zip2"
-          name="Zip2"
-          className={styles.input}
-          value={formData.Zip2}
-          onChange={getOnChangeFunction(formData, setFormData, "Zip2")}
-        />
-      </div>
+        {/* Address fields only for Alabama (AL) and Alaska (AK) in State1 */}
+        {formData.State1 === "AL" && (
+          <div className={styles.flex}>
+            <label htmlFor="street1" className={styles.label}>
+              Street 1 (Alabama)
+            </label>
+            <input
+              type="text"
+              id="street1"
+              name="street1"
+              className={styles.input}
+              value={formData.street1}
+              onChange={getOnChangeFunction(formData, setFormData, "street1")}
+            />
+            <label htmlFor="City1" className={styles.label}>
+              City 1 (Alabama)
+            </label>
+            <input
+              type="text"
+              id="City1"
+              name="City1"
+              className={styles.input}
+              value={formData.City1}
+              onChange={getOnChangeFunction(formData, setFormData, "City1")}
+            />
+            <label htmlFor="Zip1" className={styles.label}>
+              Zip 1 (Alabama)
+            </label>
+            <input
+              type="text"
+              id="Zip1"
+              name="Zip1"
+              className={styles.input}
+              value={formData.Zip1}
+              onChange={getOnChangeFunction(formData, setFormData, "Zip1")}
+            />
+          </div>
+        )}
+        {formData.State1 === "AK" && (
+          <div className={styles.flex}>
+            <label htmlFor="street2" className={styles.label}>
+              Street 2 (Alaska)
+            </label>
+            <input
+              type="text"
+              id="street2"
+              name="street2"
+              className={styles.input}
+              value={formData.street2}
+              onChange={getOnChangeFunction(formData, setFormData, "street2")}
+            />
+            <label htmlFor="City2" className={styles.label}>
+              City 2 (Alaska)
+            </label>
+            <input
+              type="text"
+              id="City2"
+              name="City2"
+              className={styles.input}
+              value={formData.City2}
+              onChange={getOnChangeFunction(formData, setFormData, "City2")}
+            />
+            <label htmlFor="Zip2" className={styles.label}>
+              Zip 2 (Alaska)
+            </label>
+            <input
+              type="text"
+              id="Zip2"
+              name="Zip2"
+              className={styles.input}
+              value={formData.Zip2}
+              onChange={getOnChangeFunction(formData, setFormData, "Zip2")}
+            />
+          </div>
+        )}
         <div className={styles.flex}>
           <CustomDatePicker
             id="PolicyEff"
