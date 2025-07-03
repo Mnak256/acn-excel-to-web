@@ -115,7 +115,7 @@ export default function InputForm() {
         {formData.State1 === "AL" && (
           <div className={styles.flex}>
             <label htmlFor="street1" className={styles.label}>
-              Street 1 (Alabama)
+              Street
             </label>
             <input
               type="text"
@@ -126,7 +126,7 @@ export default function InputForm() {
               onChange={getOnChangeFunction(formData, setFormData, "street1")}
             />
             <label htmlFor="City1" className={styles.label}>
-              City 1 (Alabama)
+              City
             </label>
             <input
               type="text"
@@ -137,7 +137,7 @@ export default function InputForm() {
               onChange={getOnChangeFunction(formData, setFormData, "City1")}
             />
             <label htmlFor="Zip1" className={styles.label}>
-              Zip 1 (Alabama)
+              Zip
             </label>
             <input
               type="text"
@@ -152,7 +152,7 @@ export default function InputForm() {
         {formData.State1 === "AK" && (
           <div className={styles.flex}>
             <label htmlFor="street2" className={styles.label}>
-              Street 2 (Alaska)
+              Street
             </label>
             <input
               type="text"
@@ -163,7 +163,7 @@ export default function InputForm() {
               onChange={getOnChangeFunction(formData, setFormData, "street2")}
             />
             <label htmlFor="City2" className={styles.label}>
-              City 2 (Alaska)
+              City
             </label>
             <input
               type="text"
@@ -174,7 +174,7 @@ export default function InputForm() {
               onChange={getOnChangeFunction(formData, setFormData, "City2")}
             />
             <label htmlFor="Zip2" className={styles.label}>
-              Zip 2 (Alaska)
+              Zip
             </label>
             <input
               type="text"
